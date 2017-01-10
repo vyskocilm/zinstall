@@ -1,0 +1,17 @@
+<project
+    name = "zinstall"
+    description = "example usage of zproject_install.gsl"
+    script = "zproject.gsl"
+    license = "MPL-2.0"
+    >
+
+    <version major = "1" minor = "0" patch = "0" />
+
+    <main name = "main1" service = "1" >
+        main with tmpfiles.d file
+        <install type = "systemd-tmpfiles" />
+    </main>
+    <main name = "main2" service = "1" >
+        main without tmpfiles.d file
+    </main>
+</project>

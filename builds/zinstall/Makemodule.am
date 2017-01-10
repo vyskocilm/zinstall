@@ -1,0 +1,4 @@
+if WITH_SYSTEMD_UNITS
+main1_tmpfiles_ddir = /usr/lib/tmpfiles.d/
+main1_tmpfiles_d_DATA = src/main1.conf
+endif #WITH_SYSTEMD_UNITS
