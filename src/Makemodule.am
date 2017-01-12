@@ -81,10 +81,16 @@ coverage: src/zinstall_selftest
 	@echo "call make clean && configure --with-gcov to enable code coverage"
 	@exit 1
 endif
+
+if ENABLE_MAIN1
 if WITH_SYSTEMD_UNITS
 main1_tmpfiles_ddir = /usr/lib/tmpfiles.d/
 main1_tmpfiles_d_DATA = src/main1.conf
 endif #WITH_SYSTEMD_UNITS
+endif #MAIN1
+if ENABLE_MAIN1
+src_zinstall_config_DATA += src/main1.ldap.integration.cfg.example
+endif
 
 
 ################################################################################

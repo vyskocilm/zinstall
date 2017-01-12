@@ -8,10 +8,11 @@
     <version major = "1" minor = "0" patch = "0" />
 
     <main name = "main1" service = "1" >
-        main with tmpfiles.d file
+        main with tmpfiles.d and config files
         <install type = "systemd-tmpfiles" />
+        <install type = "config" name = "main1.ldap.integration.cfg.example" />
     </main>
     <main name = "main2" service = "1" >
-        main without tmpfiles.d file
+        main without aditional files
     </main>
 </project>
